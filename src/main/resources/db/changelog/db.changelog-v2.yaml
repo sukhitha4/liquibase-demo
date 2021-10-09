@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: update-posting-table-add-notes
+      author: sukhitha
+      changes:
+        - addColumn:
+            tableName: posting
+            columns:
+              - column:
+                  name: notes
+                  type: varchar(50)
+  - changeSet:
+      id:  update-posting-1
+      author:  sukhitha
+      changes:
+        - update:
+            catalogName:  posting
+            columns:
+              - column:
+                  name:  notes
+                  value:  "Sample reference"
+            schemaName:  public
+            tableName:  posting

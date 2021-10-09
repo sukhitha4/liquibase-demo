@@ -1,0 +1,17 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/dbchangelog.yaml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/Sukhitha
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      format_sql: false
+    username: postgres
+    password: password
+  jpa:
+    show-sql: true
+logging:
+  level:
+    liquibase: INFO

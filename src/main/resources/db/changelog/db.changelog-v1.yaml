@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-posting-table
+      author: sukhitha
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: amount
+                  type: VARCHAR(250)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: status
+                  type: VARCHAR(25)
+              - column:
+                  name: timestamp
+                  type: VARCHAR(250)
+            tableName: posting
+  - changeSet:
+      id:  insert-posting-1
+      author:  sukhitha
+      changes:
+        - insert:
+            catalogName:  posting
+            columns:
+              - column:
+                  name:  amount
+                  value:  "24.55"
+              - column:
+                  name:  status
+                  value:  "pending"
+              - column:
+                  name:  timestamp
+                  value:  "2021-10-06 00:40:42"
+            schemaName:  public
+            tableName:  posting
