@@ -3,15 +3,16 @@ spring:
     change-log: classpath:/db/changelog/dbchangelog.yaml
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/Sukhitha
+    url: jdbc:postgresql://localhost:26257/liquibasedemodb
     hibernate:
       ddl-auto: none
       dialect: org.hibernate.dialect.MySQL5InnoDBDialect
       format_sql: false
-    username: postgres
-    password: password
+    username: root
   jpa:
     show-sql: true
 logging:
   level:
-    liquibase: INFO
+    liquibase: DEBUG
+server:
+  port : 8072

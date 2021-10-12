@@ -1,7 +1,6 @@
 package com.captains.controller;
 
-import com.captains.dto.PostingDto;
-import com.captains.entity.Posting;
+import com.captains.domain.Posting;
 import com.captains.service.PostingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +16,7 @@ public class PostingController {
     PostingService postingService;
 
     @GetMapping("/postings")
-    public ResponseEntity<List<PostingDto>> getPostings () {
+    public ResponseEntity<List<Posting>> getPostings () {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(postingService.getPostings());
     }

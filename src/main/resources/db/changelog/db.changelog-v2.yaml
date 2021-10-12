@@ -18,6 +18,6 @@ databaseChangeLog:
             columns:
               - column:
                   name:  notes
-                  value:  "Sample reference"
+                  value:  "Payment at Ventra Kiosk"
             schemaName:  public
             tableName:  posting

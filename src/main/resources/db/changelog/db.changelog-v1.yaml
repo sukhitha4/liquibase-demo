@@ -6,7 +6,6 @@ databaseChangeLog:
         - createTable:
             columns:
               - column:
-                  autoIncrement: true
                   constraints:
                     nullable: false
                   name: id
@@ -32,6 +31,9 @@ databaseChangeLog:
         - insert:
             catalogName:  posting
             columns:
+              - column:
+                  name:  id
+                  value:  1
               - column:
                   name:  amount
                   value:  "24.55"
