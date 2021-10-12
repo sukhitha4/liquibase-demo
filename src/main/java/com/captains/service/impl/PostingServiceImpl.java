@@ -22,7 +22,7 @@ public class PostingServiceImpl implements PostingService {
                         .amount(posting.getAmount())
                         .status(posting.getStatus())
                         .timestamp(posting.getTimestamp())
-//                        .notes(posting.getNotes())
+                        .notes(posting.getNotes())
                 .build())
                 .collect(Collectors.toList());
     }

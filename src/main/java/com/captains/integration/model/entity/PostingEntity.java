@@ -20,5 +20,5 @@ public class PostingEntity {
     private double amount;
     private String status;
     private String timestamp;
-//    private String notes;
+    private String notes;
 }
